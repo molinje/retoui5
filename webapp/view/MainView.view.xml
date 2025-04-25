@@ -9,10 +9,10 @@
 		<f:SimpleForm id="SimpleFormToolbar"
 			editable="true"
 			layout="ResponsiveGridLayout"
-			labelSpanXL="4"
-			labelSpanL="3"
-			labelSpanM="4"
-			labelSpanS="12"
+			labelSpanXL="3"
+			labelSpanL="2"
+			labelSpanM="3"
+			labelSpanS="8"
 			adjustLabelSpan="false"
 			emptySpanXL="0"
 			emptySpanL="4"
@@ -28,10 +28,9 @@
 				<Toolbar ariaLabelledBy="Title2">
 					<Title id="Title2" text="{i18n>pinfo}"/>
 					<ToolbarSpacer />
-					<Button icon="sap-icon://settings"/>
 				</Toolbar>
 				<Label text="ID" />
-				<Input value="{modeluser/form/userid}" />
+				<Input id="userid" type="Number" required="true"/>
 				<Label text="Type Document" />
 				<Select id="typedoc" selectedKey="{modeluser/form/typedoc}">
 					<items>
@@ -41,56 +40,159 @@
 					</items>
 				</Select>
 				<Label text="Number Document" />
-				<Input value="{modeluser/form/docnumber}" />
+				<Input id="docnumber" value="{modeluser/docnumber}" required="true" />
 				<Label text="First Name." />
-				<Input value="{modeluser/form/firsname}"/>
+				<Input id="firsname" value="{form/firsname}" required="true"/>
 				<Label text="Last Name." />
-				<Input value="{modeluser/form/lastname}"/>
-				<Label text="Date" />
+				<Input id="lastname" value="{modeluser/form/lastname}" required="true"/>
+				<!-- <Label text="Date" />
 				<DatePicker value="{
 				path: 'modeluser/form/bdate',
-				type: 'DateType'}" />					
+				type: 'DateType'}" />	 -->				
 				
 				<Toolbar ariaLabelledBy="Title3">
 					<Title id="Title3" text="{i18n>otherinfo}"/>
 					<ToolbarSpacer />
-					<Button icon="sap-icon://settings"/>
 				</Toolbar>
 				<Label text="Place Birth" />
-				<Input value="{modeluser/form/pbirth}"  />
+				<Input id="pbirth" value="{modeluser/form/pbirth}" required="true" />
 				<Label text="Nationality" />
-				<Input value="{modeluser/form/nationality}" />
+				<Select id="nationalitySelect"
+       					selectedKey="{modeluser/form/nationality}"
+        				items="{countryModel>/countries}"
+						required="true">
+    			<core:Item key="{countryModel>code}" text="{countryModel>name}" />
+				</Select>
+								
 				<Label text="Genre" />
-				<Input value="{modeluser/form/genre}" />
+				<Select id="generoSelect"
+       					selectedKey="{modeluser/form/country}"
+        				items="{countryModel>/genero}" required="true">
+    			<core:Item key="{countryModel>code}" text="{countryModel>name}" />
+				</Select>
 				<Label text="Civil Status" />
-				<Input value="{modeluser/form/civilstatus}" />
+                 <Select id="civilstatusSelect"
+       					selectedKey="{modeluser/form/country}"
+        				items="{countryModel>/civilstatus}"
+						required="true">
+    			<core:Item key="{countryModel>code}" text="{countryModel>name}" />
+				</Select>
+				
 
 				<Toolbar ariaLabelledBy="Title4">
 					<Title id="Title4" text="{i18n>addressinfo}"/>
 					<ToolbarSpacer />
-					<Button icon="sap-icon://settings"/>
 				</Toolbar>
 				<Label text="Country" />
-				<Input value="{modeluser/form/pbirth}" />
+				<Select id="countrySelect"
+       					selectedKey="{modeluser/form/country}"
+        				change=".onCountryChange"
+        				items="{countryModel>/countries}"
+						required="true">
+    			<core:Item key="{countryModel>code}" text="{countryModel>name}" />
+				</Select>
+				
 				<Label text="Province" />
-				<Input value="{modeluser/form/province}" />
-				<Label text="Region" />
-				<Input value="{modeluser/form/region}"  />
+				<Select id="provinceSelect"
+        				selectedKey="{modeluser/form/province}" 
+						required="true">
+					<items>
+						<!-- Llenado dinámico desde el controlador -->
+					</items>
+				</Select>
+				<!-- <Label text="Region" />-->
+				<!-- <Input id="region" value="{modeluser/form/region}"  required="true"/>-->
 				<Label text="Address" />
-				<Input value="{modeluser/form/address}" />
+				<Input id="address" value="{modeluser/form/address}" required="true"/>
 				<Label text="Postal code" />
-				<Input value="{modeluser/form/pcode}" />
+				<Input id="pcode" value="{modeluser/form/pcode}" required="true"/>
 				<Toolbar ariaLabelledBy="Title5">
 					<Title id="Title5" text="{i18n>contactinfo}"/>
 					<ToolbarSpacer />
-					<Button icon="sap-icon://settings"/>
 				</Toolbar>
 				<Label text="Phone Number" />
-				<Input value="{modeluser/form/phonenumber}" type="Url" />
+				<Input id="phonenumber" value="{modeluser/form/phonenumber}" type="Url" required="true"/>
 				<Label text="Email" />
-				<Input value="{modeluser/form/email}" />
+				<Input id="email" value="{modeluser/form/email}" required="true" />
 			</f:content>
 		</f:SimpleForm>
 	</VBox>
+		<Panel id="_IDGenPaneltable">
+			<Table 	id="idProductsTable"
+					inset="false"
+					items="{
+			path: 'modeluser>/users',
+			sorter: {
+				path: 'userid'
+			}
+		}">
+		<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title text="Usuarios" level="H2"/>
+					
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<infoToolbar>
+			<OverflowToolbar>
+				<Label text="Usuarios inscritos en el curso SAPUi5"/>
+			</OverflowToolbar>
+		</infoToolbar>
+		<columns>
+			<Column>
+				<Text text="Number document" />
+			</Column>
+			<Column>
+				<Text text="First Name" />
+			</Column>
+			<Column>
+				<Text text="Last Name" />
+			</Column>
+			<Column>
+				<Text text="Place birth" />
+			</Column>
+			<Column>
+				<Text text="Nationality" />
+			</Column>
+			<Column>
+				<Text text="Genre" />
+			</Column>
+			<Column>
+				<Text text="Civil status" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<ObjectIdentifier
+						title="{modeluser>userid}"
+						text="{modeluser>lastname}"/>
+					<Text text="{modeluser>firsname}"/>
+					<Text text="{modeluser>lastname}"/>
+					<Text text="{modeluser>pbirth}"/>
+					<Text text="{modeluser>nationality}"/>
+					<Text text="{modeluser>genre}"/>
+					<Text text="{modeluser>civilstatus}"/>
+					
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+			</Panel>
+		<footer>
+			<Bar id="_IDGenBar">
+				<contentRight>
+					<Button id="_IDGenButton" type="Accept" text="Save" press="onSave">
+					<layoutData><OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" priority="NeverOverflow" /></layoutData>
+				</Button>
+				<Button id="_IDGenButton1" type="Neutral" text="Clear" press="clearForm">
+					<layoutData><OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData" priority="NeverOverflow" /></layoutData>
+				</Button>
+				</contentRight>
+			</Bar>
+		</footer>
     </Page>
+	
+	
 </mvc:View>

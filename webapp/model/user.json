@@ -1,4 +1,22 @@
 {
-    "form": {},
+    "form": {
+      "userid": "12345",
+      "typedoc": "TIE",
+      "docnumber": "",
+      "firsname": "John",
+      "lastname": "",
+      "bdate": null,
+      "pbirth": "",
+      "nationality": "",
+      "genre": "",
+      "civilstatus": "",
+      "province": "",
+      "region": "",
+      "address": "",
+      "pcode": "",
+      "phonenumber": "",
+      "email": ""
+
+    },
     "users": []
   }

@@ -1,0 +1,67 @@
+{
+    "countries": [
+      {
+        "name": "",
+        "code": "",
+        "provinces": []
+      },
+      {
+        "name": "Colombia",
+        "code": "CO",
+        "provinces": ["Bogota", "Medellin", "Cartagena", "barranquilla", "Cali"]
+      },
+      {
+        "name": "Spain",
+        "code": "ES",
+        "provinces": ["Madrid", "Barcelona", "Valencia"]
+      },
+            
+      {
+        "name": "Germany",
+        "code": "DE",
+        "provinces": ["Berlin", "Bavaria", "Hamburg"]
+      },
+      {
+        "name": "Mexico",
+        "code": "MX",
+        "provinces": ["CDMX", "Jalisco", "Nuevo León"]
+      }
+    ],
+    "genero": [
+      {       
+        "code": "M",
+        "name": "Masculino"
+      }, 
+      {       
+        "code": "F",
+        "name": "Femenino"
+      }
+      ],
+
+      "civilstatus": [
+      {       
+        "code": "Casado/a",
+        "name": "Casado/a"
+      },
+      {       
+        "code": "Divorciado/a",
+        "name": "Divorciado/a"
+      }, 
+      {       
+        "code": "Separado/a",
+        "name": "Separado/a"
+      },    
+      {       
+        "code": "Soltero/a",
+        "name": "Soltero/a"
+      },      
+      {       
+        "code": "Unión de hecho",
+        "name": "Unión de hecho"
+      },
+      {       
+        "code": "Viudo/a",
+        "name": "Viudo/a"
+      }      
+      ]
+  }

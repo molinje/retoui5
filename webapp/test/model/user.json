@@ -1,0 +1,59 @@
+{
+    "form": {
+      "userid": "12345",
+      "typedoc": "TIE",
+      "docnumber": "7777",
+      "firsname": "John",
+      "lastname": "Molina",
+      "bdate": "",
+      "pbirth": "Colombia",
+      "nationality": "Colombia",
+      "genre": "Masculino",
+      "civilstatus": "Casado",
+      "province": "Bogotá",
+      "region": "",
+      "address": "calle 5 ",
+      "pcode": "546235",
+      "phonenumber": "69585874",
+      "email": "prueba@gmail.com"
+    },
+    "users": [
+      {
+        "userid": "7777",
+        "typedoc": "TIE",
+        "docnumber": "45465332",
+        "firsname": "John",
+        "lastname": "Molina",
+        "bdate": "",
+        "pbirth": "Colombia",
+        "nationality": "Colombia",
+        "genre": "Masculino",
+        "civilstatus": "Casado",
+        "province": "Bogotá",
+        "region": "",
+        "address": "calle 5 ",
+        "pcode": "546235",
+        "phonenumber": "69585874",
+        "email": "prueba@gmail.com"
+      },
+      {
+        "userid": "536467",
+        "typedoc": "NIE",
+        "docnumber": "566763",
+        "firsname": "Bill",
+        "lastname": "Pet",
+        "bdate": "",
+        "pbirth": "Colombia",
+        "nationality": "Colombia",
+        "genre": "Masculino",
+        "civilstatus": "Soltero",
+        "province": "Cali",
+        "region": "",
+        "address": "calle 56",
+        "pcode": "10110",
+        "phonenumber": "9854257",
+        "email": "billpet@gmail.com"
+      }
+
+    ]
+  }

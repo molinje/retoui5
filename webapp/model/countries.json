@@ -1,0 +1,36 @@
+{
+    "countries": [
+      {
+        "name": "Colombia",
+        "code": "CO",
+        "provinces": ["Bogota", "Medellin", "Cartagena", "barranquilla", "Cali"]
+      }, 
+      {
+        "name": "Spain",
+        "code": "ES",
+        "provinces": ["Madrid", "Barcelona", "Valencia"]
+      },
+      {
+        "name": "Germany",
+        "code": "DE",
+        "provinces": ["Berlin", "Bavaria", "Hamburg"]
+      },
+      {
+        "name": "Mexico",
+        "code": "MX",
+        "provinces": ["CDMX", "Jalisco", "Nuevo León"]
+      }
+    ],
+
+    "genero": [
+      {       
+        "code": "M",
+        "name": "Masculino"
+      }, 
+      {       
+        "code": "F",
+        "name": "Femenino"
+      }
+    ]
+
+  }
