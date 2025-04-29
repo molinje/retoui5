@@ -29,11 +29,11 @@
     ],
     "genero": [
       {       
-        "code": "M",
+        "code": "Masculino",
         "name": "Masculino"
       }, 
       {       
-        "code": "F",
+        "code": "Femenino",
         "name": "Femenino"
       }
       ],

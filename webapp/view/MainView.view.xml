@@ -29,9 +29,9 @@
 					<Title id="Title2" text="{i18n>pinfo}"/>
 					<ToolbarSpacer />
 				</Toolbar>
-				<Label text="ID" />
+				<Label text="{i18n>id}" />
 				<Input id="userid" type="Number" required="true"/>
-				<Label text="Type Document" />
+				<Label text="{i18n>typedoc}" />
 				<Select id="typedoc" selectedKey="{modeluser/form/typedoc}">
 					<items>
 						<core:Item text="DNI" key="DNI"/>
@@ -39,11 +39,11 @@
 						<core:Item text="Passport" key="Passport"/>
 					</items>
 				</Select>
-				<Label text="Number Document" />
+				<Label text="{i18n>docnumber}" />
 				<Input id="docnumber" value="{modeluser/docnumber}" required="true" />
-				<Label text="First Name." />
+				<Label text="{i18n>firsname}" />
 				<Input id="firsname" value="{form/firsname}" required="true"/>
-				<Label text="Last Name." />
+				<Label text="{i18n>lastname}" />
 				<Input id="lastname" value="{modeluser/form/lastname}" required="true"/>
 				<!-- <Label text="Date" />
 				<DatePicker value="{
@@ -54,9 +54,9 @@
 					<Title id="Title3" text="{i18n>otherinfo}"/>
 					<ToolbarSpacer />
 				</Toolbar>
-				<Label text="Place Birth" />
+				<Label text="{i18n>pbirth}" />
 				<Input id="pbirth" value="{modeluser/form/pbirth}" required="true" />
-				<Label text="Nationality" />
+				<Label text="{i18n>Nationality}" />
 				<Select id="nationalitySelect"
        					selectedKey="{modeluser/form/nationality}"
         				items="{countryModel>/countries}"
@@ -64,13 +64,13 @@
     			<core:Item key="{countryModel>code}" text="{countryModel>name}" />
 				</Select>
 								
-				<Label text="Genre" />
+				<Label text="{i18n>generoSelect}" />
 				<Select id="generoSelect"
        					selectedKey="{modeluser/form/country}"
         				items="{countryModel>/genero}" required="true">
     			<core:Item key="{countryModel>code}" text="{countryModel>name}" />
 				</Select>
-				<Label text="Civil Status" />
+				<Label text="{i18n>civilstatusSelect}" />
                  <Select id="civilstatusSelect"
        					selectedKey="{modeluser/form/country}"
         				items="{countryModel>/civilstatus}"
@@ -83,7 +83,7 @@
 					<Title id="Title4" text="{i18n>addressinfo}"/>
 					<ToolbarSpacer />
 				</Toolbar>
-				<Label text="Country" />
+				<Label text="{i18n>countrySelect}" />
 				<Select id="countrySelect"
        					selectedKey="{modeluser/form/country}"
         				change=".onCountryChange"
@@ -92,7 +92,7 @@
     			<core:Item key="{countryModel>code}" text="{countryModel>name}" />
 				</Select>
 				
-				<Label text="Province" />
+				<Label text="{i18n>provinceSelect}" />
 				<Select id="provinceSelect"
         				selectedKey="{modeluser/form/province}" 
 						required="true">
@@ -102,17 +102,17 @@
 				</Select>
 				<!-- <Label text="Region" />-->
 				<!-- <Input id="region" value="{modeluser/form/region}"  required="true"/>-->
-				<Label text="Address" />
+				<Label text="{i18n>address}" />
 				<Input id="address" value="{modeluser/form/address}" required="true"/>
-				<Label text="Postal code" />
+				<Label text="{i18n>pcode}" />
 				<Input id="pcode" value="{modeluser/form/pcode}" required="true"/>
 				<Toolbar ariaLabelledBy="Title5">
 					<Title id="Title5" text="{i18n>contactinfo}"/>
 					<ToolbarSpacer />
 				</Toolbar>
-				<Label text="Phone Number" />
+				<Label text="{i18n>phonenumber}" />
 				<Input id="phonenumber" value="{modeluser/form/phonenumber}" type="Url" required="true"/>
-				<Label text="Email" />
+				<Label text="{i18n>address}" />
 				<Input id="email" value="{modeluser/form/email}" required="true" />
 			</f:content>
 		</f:SimpleForm>
@@ -129,37 +129,37 @@
 		<headerToolbar>
 			<OverflowToolbar>
 				<content>
-					<Title text="Usuarios" level="H2"/>
+					<Title text="{i18n>usuarios}" level="H2"/>
 					
 				</content>
 			</OverflowToolbar>
 		</headerToolbar>
 		<infoToolbar>
 			<OverflowToolbar>
-				<Label text="Usuarios inscritos en el curso SAPUi5"/>
+				<Label text="{i18n>usuariosui5}"/>
 			</OverflowToolbar>
 		</infoToolbar>
 		<columns>
 			<Column>
-				<Text text="Number document" />
+				<Text text="{i18n>docnumber}" />
 			</Column>
 			<Column>
-				<Text text="First Name" />
+				<Text text="{i18n>firsname}" />
 			</Column>
 			<Column>
-				<Text text="Last Name" />
+				<Text text="{i18n>lastname}" />
 			</Column>
 			<Column>
-				<Text text="Place birth" />
+				<Text text="{i18n>pbirth}" />
 			</Column>
 			<Column>
-				<Text text="Nationality" />
+				<Text text="{i18n>nationalitySelect}" />
 			</Column>
 			<Column>
-				<Text text="Genre" />
+				<Text text="{i18n>generoSelect}" />
 			</Column>
 			<Column>
-				<Text text="Civil status" />
+				<Text text="{i18n>civilstatusSelect}"/>
 			</Column>
 		</columns>
 		<items>
@@ -183,10 +183,10 @@
 		<footer>
 			<Bar id="_IDGenBar">
 				<contentRight>
-					<Button id="_IDGenButton" type="Accept" text="Save" press="onSave">
+					<Button id="_IDGenButton" type="Accept" text="{i18n>save}" press="onSave">
 					<layoutData><OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" priority="NeverOverflow" /></layoutData>
 				</Button>
-				<Button id="_IDGenButton1" type="Neutral" text="Clear" press="clearForm">
+				<Button id="_IDGenButton1" type="Neutral" text="{i18n>clear}" press="clearForm">
 					<layoutData><OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData" priority="NeverOverflow" /></layoutData>
 				</Button>
 				</contentRight>
